@@ -23,7 +23,7 @@ Example Playbook
 
     - hosts: servers
       roles:
-         - { role: loranger.debian-sharedance, sharedance_version: "0.6" }
+         - { role: cowops.debian-sharedance, sharedance_version: "0.6" }
 
 Tasks
 -----
