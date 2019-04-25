@@ -5,11 +5,14 @@
   ignore_errors: True
 
 - name: Install dependencies
-  apt: pkg={{ item }} state=present
-  with_items:
-    - libevent-dev
-    - gcc
-    - make
+  apt:
+    name: {{ packages }}
+    state: present
+  vars:
+    packages:
+      - libevent-dev
+      - gcc
+      - make
 
 - name: Download archive
   action: command {{ item }} chdir=/root/
